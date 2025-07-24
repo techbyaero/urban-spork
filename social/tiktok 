@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirecting...</title>
+</head>
+<body>
+  <script>
+    // Define your two possible destinations
+    const defaultUrl = 'https://techbyaero.com/socials/tiktok';
+    const fastUrl = 'https://tiktok.com/@techbyaero';
+
+    // Look at the parameters in the current page's URL
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    // Check if the 'fast_link' parameter is set to 'true'
+    if (urlParams.get('fast_link') === 'true') {
+      // If it is, go to the fast URL
+      window.location.href = fastUrl;
+    } else {
+      // Otherwise, go to the default URL
+      window.location.href = defaultUrl;
+    }
+  </script>
+</body>
+</html>
